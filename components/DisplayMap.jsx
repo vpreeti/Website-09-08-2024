@@ -435,7 +435,7 @@ const BiharMap = () => {
         {/* <h2>{zoneData.groupId}</h2> */}
         {/* <p>{zoneData.description}</p> */}
         <div className="zoneHeaderName">{showZoneData.groupId}</div>
-     
+
         <ul className='zoneImagesList'>
           <div style={{ display: "flex" }}>
 
@@ -542,6 +542,11 @@ const BiharMap = () => {
               <span>System Availability</span>
               <span>99%</span>
             </li>
+            <div className='lastUpdatedText'>
+              <span>Last Updated On: 09-08-2024</span>
+            </div>
+
+
           </ul>
         </div>
       </div>
