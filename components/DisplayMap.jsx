@@ -431,6 +431,7 @@ const BiharMap = () => {
 
   const ZonePopup = ({ zoneData }) => {
     return (
+      
       <div className="zone-popup imagesList">
         {/* <h2>{zoneData.groupId}</h2> */}
         {/* <p>{zoneData.description}</p> */}
@@ -441,16 +442,23 @@ const BiharMap = () => {
 
 
             <li>
-              <img className='zoneCriteriaImage' src={image1} alt="" />
-              <span>Transmission Lines: {zoneData.transmissionLines}</span>
+            <div className="zoneImageAndDetailsContainer">
+              <img className='zoneCriteriaImage' src={image3} alt="" />
+              <span>Grid Sub-Stations {zoneData.transmissionLines}</span>
+              <span>xx</span>
+              </div>
             </li>
             <li>
-              <img className='zoneCriteriaImage' src={image3} alt="" />
-              <span>Grid Sub-Stations: {zoneData.subStation}</span>
+            <div className="zoneImageAndDetailsContainer">
+              <img className='zoneCriteriaImage' src={image4} alt="" />
+              <span>Transformation Capacity {zoneData.subStation}</span>
+              <span>xx</span>
+              </div>
             </li>
           </div>
         </ul>
       </div>
+      
     );
   };
 
@@ -518,39 +526,48 @@ const BiharMap = () => {
           <h2 className='map-decorative-heading' style={{ textAlign: "center" }}>Our Transmission Network</h2>
           <ul className="imagesList">
             <li>
-              <img className='criteriaImage' src={image1} alt="" />
-              <span>Transmission Line</span>
-              <span>17552 ckt km</span>
+              <div className="ImageAndDetailsContainer">
+                <img className='criteriaImage' src={image1} alt="" />
+                <span>Transmission Lines</span>
+                <span>17552 ckt km</span>
+              </div>
             </li>
             <li>
-              <img className='criteriaImage' src={image2} alt="" />
-              <span>Optical Fiber</span>
-              <span>xx km</span>
+              <div className="ImageAndDetailsContainer">
+                <img className='criteriaImage' src={image2} alt="" />
+                <span>Optical Fibres</span>
+                <span>xx km</span>
+              </div>
             </li>
             <li>
-              <img className='criteriaImage' src={image3} alt="" />
-              <span>Grid Sub-Stations</span>
-              <span>155 no.</span>
+              <div className="ImageAndDetailsContainer">
+                <img className='criteriaImage' src={image3} alt="" />
+                <span>Grid Sub-Stations</span>
+                <span>155 no.</span>
+              </div>
             </li>
             <li>
-              <img className='criteriaImage' src={image4} alt="" />
-              <span>Transformation Capacity</span>
-              <span>16210 MVA</span>
+              <div className="ImageAndDetailsContainer">
+                <img className='criteriaImage' src={image4} alt="" />
+                <span>Transformation Capacity</span>
+                <span>16210 MVA</span>
+              </div>
             </li>
             <li>
-              <img className='criteriaImage' src={image5} alt="" />
-              <span>System Availability</span>
-              <span>99%</span>
+              <div className="ImageAndDetailsContainer">
+                <img className='criteriaImage' src={image5} alt="" />
+                <span>System Availability</span>
+                <span>99%</span>
+              </div>
             </li>
             <div className='lastUpdatedText'>
               <span>Last Updated On: 09-08-2024</span>
             </div>
-
-
           </ul>
         </div>
+        {(selectedZone || hoveredZone) && <ZonePopup zoneData={selectedZone || hoveredZone} />}
       </div>
-      {(selectedZone || hoveredZone) && <ZonePopup zoneData={selectedZone || hoveredZone} />}
+      {/* {(selectedZone || hoveredZone) && <ZonePopup zoneData={selectedZone || hoveredZone} />} */}
     </div >
   );
 };
