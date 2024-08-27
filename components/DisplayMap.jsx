@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../components/css/displayMap.css";
-import image1 from "../public/images/MapSectionImages/transmissionLine.png";
-import image2 from "../public/images/MapSectionImages/opticalFiber.png";
-import image3 from "../public/images/MapSectionImages/GSS.png";
-import image4 from "../public/images/MapSectionImages/transformer.png";
-import image5 from "../public/images/MapSectionImages/TAFM.png";
+import image1 from "/images/MapSectionImages/transmissionLine.png";
+import image2 from "/images/MapSectionImages/opticalFiber.png";
+import image3 from "/images/MapSectionImages/GSS.png";
+import image4 from "/images/MapSectionImages/transformer.png";
+import image5 from "/images/MapSectionImages/TAFM.png";
 
 const districts = [
   {
@@ -439,8 +439,6 @@ const BiharMap = () => {
 
         <ul className='zoneImagesList'>
           <div style={{ display: "flex" }}>
-
-
             <li>
             <div className="zoneImageAndDetailsContainer">
               <img className='zoneCriteriaImage' src={image3} alt="" />
@@ -532,7 +530,7 @@ const BiharMap = () => {
                 <span>17552 ckt km</span>
               </div>
             </li>
-            <li>
+            <li> 
               <div className="ImageAndDetailsContainer">
                 <img className='criteriaImage' src={image2} alt="" />
                 <span>Optical Fibres</span>
